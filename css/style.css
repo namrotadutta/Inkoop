@@ -1,16 +1,45 @@
+ @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+ *{
+   margin: 0px;
+   padding: 0px;
+ }
+ hr{
+  width: 100px;
+  margin: 10px auto 10px 0px;
+  height: 2px;
+  background-color: #ea3f3f;
+ }
+ .paragraph{
+   white-space: pre-line;
+  
+ }
  .wrapper{
   display: flex;
+  padding: 30px; 
 } 
+body{
+  color: #8b8b8b;
+  width: 1440px;
+  margin: 0px auto;
+}
 header {
   font-weight: bolder;
   font-size: 20px;
   width: 100%;
-  padding: 10px;  
+  padding: 30px;  
+  color: #000;
+  font-family: 'Abril Fatface', cursive;
+  display: flex;
+}
+.headline{
+  padding: 0px 30px;
 }
 .headline h1 {
-  white-space: pre;
-  font-size: 60px; 
+  font-size: 70px;
   display: inline;
+  font-family: 'Abril Fatface', cursive;
+  word-spacing: 9px;
+  color: #000;
 }
 ul {
   list-style-type: none;
@@ -35,16 +64,18 @@ li {
   border: transparent;
   opacity: 0.7;
 }
-.paragraph {
-  white-space: pre-line;
-}
+ 
 .redline{
   color: red;
-  white-space: pre;
 }
 .flex-container{
-display: flex; 
+  display: flex; 
+  flex-direction: column;
 } 
+.header{
+  display: flex; 
+  flex-direction: row;
+}  
 .gallery img{
   width: 130px;
   height: 130px;
@@ -56,9 +87,9 @@ display: flex;
   border-radius: 20px;
   height: 200px;
   display: table;
-  border: 2px solid;
   padding: 5px;
-  margin: 20px; 
+  margin: 15px; 
+  box-shadow: 15px 15px 35px 0px #cecccc;
 }
 .text{
   text-align: center;
@@ -79,17 +110,33 @@ display: flex;
 
 /* for mobile screen */
 @media screen and (max-width:500px){
+  header{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  body {
+    width: 100%;
+  }
+  .paragraph {
+    margin: 15px 0px;
+  }
+  .wrapper {
+    margin-top: 40px;
+  }
   .file1 {
     display: none;
   }
   .file2 {
     text-align: center;
   }
-   .flex-container{
+  .header{
+    display: flex;
     flex-direction: column;
-    text-align: center;
-   
-  } 
+  }
+  .headline h1 {
+    font-size: 30px;
+  }
   .line {
     width: 30px;
     height: 3px;
@@ -102,13 +149,26 @@ display: flex;
     cursor: pointer;
     top: 7%;
   }
+  .display{
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+  }
   .navbar {
     display: none;
   }
-  .headline {
-    white-space: pre;
-   
+  .gallery img{
+    width: 100px;
+    height: 100px;
   }
+  .gallery{
+    width: 130px;
+    height: 160px;
+    margin: 10px; 
+    
+    
+  }
+  
   .cart img{
     width: 30px;
     height: 30px;
@@ -117,5 +177,7 @@ display: flex;
     cursor: pointer;
     top: 7%;
   }
- 
+ .image5{
+   display: none;
+ }
 }
