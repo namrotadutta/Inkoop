@@ -1,7 +1,11 @@
-header {
+/* header {
   font-weight: bolder;
   font-size: 20px;
   width: 100%;
+}
+.cart img {
+  width: 30px;
+  height: 30px;
 }
 
 ul {
@@ -18,11 +22,13 @@ li {
 .headline {
   white-space: pre;
   font-size: 40px;
-  
- 
+}
+.flex-container{
+  display: flex;
+  flex-direction: row;
 }
 .mybutton {
-  background-color:red;
+  background-color: red;
   color: white;
   font-size: 18px;
   padding: 5px;
@@ -36,23 +42,179 @@ li {
 .paragraph {
   white-space: pre-line;
   margin-right: 50px;
-
 }
 .wrapper {
   display: flex;
-   
 }
- .images{
-  display: flex;
- 
- 
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: tomato;
+  }
+  .res-line {
+    position: absolute;
+    left: 5%;
+    cursor: pointer;
+    top: 7%;
+  }
+   .flex-container{
+    flex-direction: column;
+    text-align: justify;
+   
+  } 
+  .navbar {
+    display: none;
+  }
+     .headline> h1{
+    justify-content: center; 
+  } 
+  .paragraph{
+    text-align: center;
+  }
+  .file1 {
+    display: none;
+  }
+  .file2 {
+    text-align: center;
+  }
+  .cart img {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    top: 7%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .file2 {
+    display: none;
+  }
+  .cart img {
+    display: none;
+  }
 } 
-img{
+*/
+.wrapper{
+  display: flex;
+}
+header {
+  font-weight: bolder;
+  font-size: 20px;
+  width: 100%;
+}
+.headline> h1 {
+  white-space: pre;
+   font-size: 60px; 
+  
+  
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  line-height: 70px;
+  font-size: 18px;
+}
+.decoration {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+.mybutton {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  width: 130px;
+  height: 50px;
+  margin: 50px;
+  border-radius: 30px;
+  border: transparent;
+  opacity: 0.7;
+}
+
+.paragraph {
+  white-space: pre-line;
+  margin-right: 50px;
+}
+.flex-container{
+display: flex;
+}
+.image img{
   width: 130px;
   height: 130px;
   border-radius: 50%;
- 
+  align-items: center;
+  
 }
-.desc p{
-  font-size: 20px;
+.gallery{
+  background: chartreuse;
+  width: 150px;
+  border-radius: 20px;
+  height: 150px;
+  display: table;
+  border: 2px solid;
+  padding: 5px;
+  
+  
+}
+.display{
+  display: flex;
+  
+  float: left;
+  
+}
+
+/* for laptop screen */
+@media screen and (min-width:500px) {
+  .file2 {
+    display: none;
+  }
+  .cart img {
+    display: none;
+  }
+}
+
+/* for mobile screen */
+@media screen and (max-width:500px){
+  .file1 {
+    display: none;
+  }
+  .file2 {
+    text-align: center;
+  }
+   .flex-container{
+    flex-direction: column;
+    text-align: center;
+   
+  } 
+  .line {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: tomato;
+  }
+  .res-line {
+    position: absolute;
+    left: 5%;
+    cursor: pointer;
+    top: 7%;
+  }
+  .navbar {
+    display: none;
+  }
+  .headline {
+    white-space: pre;
+   
+  }
+  .cart img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    top: 7%;
+  }
+
 }
